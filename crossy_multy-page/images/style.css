@@ -1,0 +1,328 @@
+/* подключение локальный шрифтов на страницу */
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url(fonts/AnonymousPro-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+    display: swap;
+}
+
+@font-face {
+    font-family: "Anonymous Pro";
+    src: url(fonts/AnonymousPro-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+    display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* сброс стилей по умолчанию */
+body,h1,h2,h3,p,ul,li {
+    margin: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+/* задание шрифта всей странице */
+body {
+    font-family: "Anonymous Pro", sans-serif;
+}
+
+/* стили для главного контейнера */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F1F1F1;
+}
+
+/* стили для хедера(шапки) сайта */
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #A1A6B4;
+    background: white;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 24px 0 24px;
+}
+
+.logo-link {
+    max-width: 215px;
+}
+
+/* стили для ссылок в хедере и футере */
+nav {
+    display: flex;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 24px;
+}
+
+.nav-item {
+    display: inline;
+}
+
+.nav-link {
+    color: #121723;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* стили для  */
+.content {
+    margin: 32px 0;
+    max-width: 1140px;
+}
+
+h1 {
+    font-size: 48px;
+
+    font-family: "Anonymous Pro", sans-serif;
+
+}
+
+/* стили для контейнера кроссовок */
+.sneakers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 32px 0 0;
+}
+
+/* стили для карточки кроссовок */
+.sneaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 364px;
+    height: 100%;
+    border-radius: 12px;
+    background: white;
+}
+
+.sneaker:hover {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    transform: translate(0, -10px);
+}
+
+.sneaker-image {
+    width: 100%;
+}
+
+.sneaker-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 32px 24px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+p {
+    font-size: 20px;
+}
+
+h3,
+p {
+    color: #121723;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #121723;
+}
+
+/* стили для футера */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1140px;
+    margin: 32px 0;
+}
+
+.footer__logo-link {
+    max-width: 300px;
+    width: 100%;
+}
+
+footer .nav-link {
+    color: white;
+}
+
+.copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1140px;
+    border-top: 1px solid #A1A6B4;
+}
+
+.copyright-text {
+    color: #A1A6B4;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 24px 0;
+}
+
+/* страницы с подробной информацие о кросовке */
+
+
+.content-info {
+    width: 100%;
+
+    margin: 32px 0 48px;
+    padding: 24px;
+
+    background-color: white;
+    border-radius: 50px;
+}
+
+
+title {
+    height: 48px;
+    font-family: "Anonymous Pro";
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.subtitle {
+    padding: 24px 0;
+}
+
+.information__text {
+    display: flex;
+    margin: 0;
+    width: 100%;
+}
+
+.main__text {
+    display: block;
+    box-sizing: border-box;
+    max-width: 506px;
+}
+
+.text {
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.text:last-child {
+    margin-bottom: 0;
+}
+
+.short__info {
+    margin-left: 32px;
+    width: 100%;
+    max-width: 506px;
+}
+
+.short__info__title {
+    color: var(--black, #121723);
+    font-family: "Anonymous Pro", sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.short__info__lements {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #121723;
+}
+
+.short__info__lements>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* конец страниц с инф. о кросовке */
+
+@media screen and (max-width: 768px) {
+    .header-container,
+    .footer-content {
+        justify-content: center;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo-link>img {
+        width: 215px;
+        height: 64px;
+    }
+
+    nav {
+        padding-top: 24px;
+    }
+    .sneakers {
+        margin: 32px 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+        margin-left: 16px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        margin: 32px 16px 24px;
+    }
+
+    .footer__logo-image {
+        width: 300px;
+        height: 22px;
+    }
+
+    /* конец стилей для основной страницы и начала подробной инфы о кросовке*/
+    .content-info {
+        width: 295px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    .information__text {
+        flex-direction: column;
+    }
+
+    .short__info {
+        margin: 32px 0 0;
+    }
+}
